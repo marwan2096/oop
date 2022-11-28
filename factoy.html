@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var person=function(meals,hours,item){
+            return{
+                meals:meals,
+                hours:hours,
+                item:item,
+              
+                eat :function () {
+       if(meals==3)
+       {
+        return this.healthrate='100%'
+       }
+       if(meals==2)
+       {
+        return this.healthrate='75%'
+       }
+       if(meals==1)
+       {
+        return this.healthrate='50%'
+       }
+      },
+      sleep : function () {
+       if(hours==7)
+       {
+        return this.sleepmood="happy";
+       }
+       else if(hours<7)
+       {
+        return this.sleepmood="tired";
+       }
+       else if(hours>7)
+       {
+        return this.sleepmood="lazy";
+       }
+      },
+      buy : function () {
+        return this.money=item*-10;
+      }
+            }
+        }
+
+        var maro=person('2',7,'2',);
+        console.log(maro.sleep())
+        console.log(maro.eat())
+        console.log(maro.buy())
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function Person(fName, money, sleepMode, healthRate) {
+        this.fName = fName;
+        this.money = money;
+        this.sleepMode = sleepMode;
+        this.healthRate = healthRate;
+
+    this.eat = function (meals) {
+       if(meals==3)
+       {
+        return this.healthrate='100%'
+       }
+       if(meals==2)
+       {
+        return this.healthrate='75%'
+       }
+       if(meals==1)
+       {
+        return this.healthrate='50%'
+       }
+      };
+      this.sleep = function (hours) {
+       if(hours==7)
+       {
+        return this.sleepmood="happy";
+       }
+       else if(hours<7)
+       {
+        return this.sleepmood="tired";
+       }
+       else if(hours>7)
+       {
+        return this.sleepmood="lazy";
+       }
+      };
+      this.buy = function (item) {
+        return this.money=item*-10;
+      };
+  }
+
+  var x =new Person()
+  console.log(x.eat(2))
+ 
+  console.log(x.buy(3))
+  console.log(x.sleep(7))
+  
+ console.log(x);
+
+    </script>
+</body>
+</html>

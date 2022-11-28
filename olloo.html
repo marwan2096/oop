@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const person= {
+  init (fullname, money, sleepmood, healthRate) {
+    this.fullname = fullname
+    this.money = money
+    this.sleepmood = sleepmood
+    this.healthRate = healthRate
+    this.sleep = function  (hour) {
+    if(hour===7){
+    return ("happy")
+    }else if (hour > 7){
+       return("lazy")
+    }else{
+       return("tired")
+    }
+}
+this.eat  = function (meals) {
+    if(meals === 3){
+        return   ("100 health rate")
+    }else if (meals === 2){
+       return  ("75 health rate")
+    }
+}
+
+this.buy  = function (items) {
+    return this.money=item*-10;   }
+
+    return this
+  }
+}
+const maro = Object.create(person).init('maro',10,"lazy", 100);
+console.log(maro);
+console.log(maro);
+console.log(maro.sleep(6));
+console.log(maro.buy(1));
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

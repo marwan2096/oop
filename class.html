@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+  </head>
+
+  <body>
+    <script>
+
+      //*using class
+      class Person {
+        constructor(fName, money, sleepMode, healthRate) {
+          this.fName = fName;
+          this.money = money;
+          this.sleepMode = sleepMode;
+          this.healthRate = healthRate;
+
+          this.sleep = function (hours) {
+            if (hours == 7) {
+              return (this.sleepMode = "happy");
+            } else if (hours < 7) {
+              return (this.sleepMode = "tired");
+            } else if (hours > 7) {
+              return (this.sleepMode = "lazy");
+            }
+          };
+
+          this.eat = function (meals) {
+            if (meals == 3) {
+              return this.healthrate='100%'
+            } else if (meals == 2) {
+              return this.healthrate='75%'
+            } else if (meals == 1) {
+              return this.healthrate='50%'
+            }
+          };
+          this.buy = function (item) {
+        return this.money=item*-10;
+      };
+  }
+        }
+      
+        const x= new Person("marwan", 100, "happy", '75%');
+      console.log(x.fName);
+      console.log(x.buy(2));
+      console.log(x.sleep(7));
+      console.log(x.eat(1));
+      console.log(x);
+      
+
+
+    </script>
+  </body>
+
+</html>
